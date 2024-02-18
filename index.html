@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Partie d'échecs en local</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1 class="text-xl text-center mb-10">Partie d'échecs</h1>
+    <div class="h-[80vmin] flex items-center mt-10 justify-evenly">
+      <div class="flex justify-evenly flex-col h-full w-[35%]">
+        <div class="flex flex-col w-full h-full">
+          <h5>Pièces noires</h5>
+          <div
+            class="flex p-3 flex-wrap w-full border-black border-2 justify-evenly"
+            id="pieces-noirs"
+          ></div>
+        </div>
+        <div class="flex flex-col w-full h-full">
+          <h5>Pièces blanches</h5>
+          <div
+            class="flex p-3 flex-wrap w-full border-black border-2 justify-evenly"
+            id="pieces-blancs"
+          ></div>
+        </div>
+      </div>
+      <table
+        id="plateau"
+        class="border-black border-2 border-spacing-1 bg-purple-200"
+      ></table>
+      <button
+        type="submit"
+        class="text-white bg-blue-700 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:bg-blue-800"
+        onclick="back()"
+      >
+        &#8634;
+      </button>
+    </div>
+  </body>
+</html>
+<style>
+  td .tooltip {
+    visibility: hidden;
+  }
+  td :hover .tooltip {
+    visibility: visible;
+  }
+</style>
